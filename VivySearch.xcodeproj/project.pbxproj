@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445658FE8D848FF8A32AAE4D /* Pods_VivySearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEE8DEFC3CAE5452E3A3EF /* Pods_VivySearch.framework */; };
 		CE37AC5E2109B666008DE500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37AC5D2109B666008DE500 /* AppDelegate.swift */; };
-		CE37AC602109B666008DE500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37AC5F2109B666008DE500 /* ViewController.swift */; };
+		CE37AC602109B666008DE500 /* DoctorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37AC5F2109B666008DE500 /* DoctorListViewController.swift */; };
 		CE37AC632109B666008DE500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE37AC612109B666008DE500 /* Main.storyboard */; };
 		CE37AC652109B669008DE500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE37AC642109B669008DE500 /* Assets.xcassets */; };
 		CE37AC682109B669008DE500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE37AC662109B669008DE500 /* LaunchScreen.storyboard */; };
+		CEB78BC1210A1EEF005B0200 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB78BC0210A1EEF005B0200 /* sample.json */; };
+		CEB78BC5210A261C005B0200 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BC4210A261C005B0200 /* Doctor.swift */; };
+		CEB78BC9210A348F005B0200 /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BC8210A348F005B0200 /* DoctorCell.swift */; };
+		CEB78BCD210A34C8005B0200 /* DoctorListViewDataSouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BCB210A34C8005B0200 /* DoctorListViewDataSouce.swift */; };
+		CEB78BCE210A34C8005B0200 /* DocotorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */; };
+		CEB78BD1210A5C7B005B0200 /* DoctorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BE78146D9D21350140CAD81 /* Pods-VivySearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivySearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivySearch/Pods-VivySearch.debug.xcconfig"; sourceTree = "<group>"; };
+		57B2D0B0956E6678670C1EA2 /* Pods-VivySearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivySearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivySearch/Pods-VivySearch.release.xcconfig"; sourceTree = "<group>"; };
 		CE37AC5A2109B666008DE500 /* VivySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE37AC5D2109B666008DE500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE37AC5F2109B666008DE500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE37AC5F2109B666008DE500 /* DoctorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListViewController.swift; sourceTree = "<group>"; };
 		CE37AC622109B666008DE500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE37AC642109B669008DE500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE37AC672109B669008DE500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE37AC692109B669008DE500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB78BC0210A1EEF005B0200 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		CEB78BC4210A261C005B0200 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		CEB78BC8210A348F005B0200 /* DoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCell.swift; sourceTree = "<group>"; };
+		CEB78BCB210A34C8005B0200 /* DoctorListViewDataSouce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorListViewDataSouce.swift; sourceTree = "<group>"; };
+		CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocotorListViewModel.swift; sourceTree = "<group>"; };
+		CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAPI.swift; sourceTree = "<group>"; };
+		FDDEE8DEFC3CAE5452E3A3EF /* Pods_VivySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				445658FE8D848FF8A32AAE4D /* Pods_VivySearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EDBF9FAF20AD447CA077EA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDDEE8DEFC3CAE5452E3A3EF /* Pods_VivySearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8215B355AE240C44AB6565FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BE78146D9D21350140CAD81 /* Pods-VivySearch.debug.xcconfig */,
+				57B2D0B0956E6678670C1EA2 /* Pods-VivySearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE37AC512109B666008DE500 = {
 			isa = PBXGroup;
 			children = (
 				CE37AC5C2109B666008DE500 /* VivySearch */,
 				CE37AC5B2109B666008DE500 /* Products */,
+				8215B355AE240C44AB6565FF /* Pods */,
+				7EDBF9FAF20AD447CA077EA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +90,52 @@
 		CE37AC5C2109B666008DE500 /* VivySearch */ = {
 			isa = PBXGroup;
 			children = (
+				CEB78BCF210A5C56005B0200 /* Networking */,
+				CEB78BBF210A1D6B005B0200 /* Model */,
+				CEB78BBD210A1D61005B0200 /* View */,
+				CEB78BCA210A34C8005B0200 /* View Model */,
 				CE37AC5D2109B666008DE500 /* AppDelegate.swift */,
-				CE37AC5F2109B666008DE500 /* ViewController.swift */,
 				CE37AC612109B666008DE500 /* Main.storyboard */,
+				CEB78BC0210A1EEF005B0200 /* sample.json */,
 				CE37AC642109B669008DE500 /* Assets.xcassets */,
-				CE37AC662109B669008DE500 /* LaunchScreen.storyboard */,
 				CE37AC692109B669008DE500 /* Info.plist */,
+				CE37AC662109B669008DE500 /* LaunchScreen.storyboard */,
 			);
 			path = VivySearch;
+			sourceTree = "<group>";
+		};
+		CEB78BBD210A1D61005B0200 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE37AC5F2109B666008DE500 /* DoctorListViewController.swift */,
+				CEB78BC8210A348F005B0200 /* DoctorCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEB78BBF210A1D6B005B0200 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEB78BC4210A261C005B0200 /* Doctor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEB78BCA210A34C8005B0200 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */,
+				CEB78BCB210A34C8005B0200 /* DoctorListViewDataSouce.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		CEB78BCF210A5C56005B0200 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE37AC6C2109B669008DE500 /* Build configuration list for PBXNativeTarget "VivySearch" */;
 			buildPhases = (
+				5A3BEEF80B1553B7A1784B29 /* [CP] Check Pods Manifest.lock */,
 				CE37AC562109B666008DE500 /* Sources */,
 				CE37AC572109B666008DE500 /* Frameworks */,
 				CE37AC582109B666008DE500 /* Resources */,
+				B47AD30964871F02C261F8D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE37AC682109B669008DE500 /* LaunchScreen.storyboard in Resources */,
+				CEB78BC1210A1EEF005B0200 /* sample.json in Resources */,
 				CE37AC652109B669008DE500 /* Assets.xcassets in Resources */,
 				CE37AC632109B666008DE500 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +207,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A3BEEF80B1553B7A1784B29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VivySearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B47AD30964871F02C261F8D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VivySearch/Pods-VivySearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VivySearch/Pods-VivySearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE37AC562109B666008DE500 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE37AC602109B666008DE500 /* ViewController.swift in Sources */,
+				CEB78BC9210A348F005B0200 /* DoctorCell.swift in Sources */,
+				CEB78BCD210A34C8005B0200 /* DoctorListViewDataSouce.swift in Sources */,
+				CE37AC602109B666008DE500 /* DoctorListViewController.swift in Sources */,
+				CEB78BD1210A5C7B005B0200 /* DoctorAPI.swift in Sources */,
 				CE37AC5E2109B666008DE500 /* AppDelegate.swift in Sources */,
+				CEB78BC5210A261C005B0200 /* Doctor.swift in Sources */,
+				CEB78BCE210A34C8005B0200 /* DocotorListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +399,13 @@
 		};
 		CE37AC6D2109B669008DE500 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BE78146D9D21350140CAD81 /* Pods-VivySearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YH9MLLYLBL;
 				INFOPLIST_FILE = VivySearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +419,13 @@
 		};
 		CE37AC6E2109B669008DE500 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B2D0B0956E6678670C1EA2 /* Pods-VivySearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YH9MLLYLBL;
 				INFOPLIST_FILE = VivySearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
