@@ -6,8 +6,8 @@
 //  Copyright © 2018 Bhunte. All rights reserved.
 //
 
-import Foundation
 import CoreLocation
+import Foundation
 
 class LocationProvider: NSObject {
     var lat: Double?
@@ -20,7 +20,7 @@ class LocationProvider: NSObject {
         
         locationManager.requestAlwaysAuthorization()
         
-        self.locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self

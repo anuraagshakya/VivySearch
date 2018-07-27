@@ -24,5 +24,4 @@ struct Doctor {
     var email: String?
     var website: String?
     var openingHours: [String]
-   
 }

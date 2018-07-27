@@ -9,22 +9,22 @@
 import UIKit
 
 class DoctorCell: UITableViewCell {
-    
     var name = "Name" {
         didSet {
             nameLabel.text = name
         }
     }
+
     var address = "Address" {
         didSet {
             addressLabel.text = address
         }
     }
 
-    @IBOutlet private weak var photo: UIImageView!
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var addressLabel: UILabel!
-    
+    @IBOutlet private var photo: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var addressLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,5 +35,4 @@ class DoctorCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

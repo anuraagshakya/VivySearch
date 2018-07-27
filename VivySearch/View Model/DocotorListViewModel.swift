@@ -45,26 +45,25 @@ class DoctorListViewModel {
             }
             
             let doctor = Doctor(
-                id              : dataPoint["id"].stringValue,
-                name            : dataPoint["name"].stringValue,
-                photoId         : dataPoint["photoId"].stringValue,
-                rating          : dataPoint["rating"].floatValue,
-                address         : dataPoint["address"].stringValue,
-                lat             : dataPoint["lat"].doubleValue,
-                lng             : dataPoint["lng"].doubleValue,
-                highlighted     : dataPoint["highlighted"].boolValue,
-                reviewCount     : dataPoint["reviewCount"].intValue,
-                specialityIds   : specialityIds,
-                source          : dataPoint["source"].stringValue,
-                phoneNumber     : dataPoint["phoneNumber"].stringValue,
-                email           : dataPoint["email"].stringValue,
-                website         : dataPoint["website"].stringValue,
-                openingHours    : openingHours)
+                id: dataPoint["id"].stringValue,
+                name: dataPoint["name"].stringValue,
+                photoId: dataPoint["photoId"].stringValue,
+                rating: dataPoint["rating"].floatValue,
+                address: dataPoint["address"].stringValue,
+                lat: dataPoint["lat"].doubleValue,
+                lng: dataPoint["lng"].doubleValue,
+                highlighted: dataPoint["highlighted"].boolValue,
+                reviewCount: dataPoint["reviewCount"].intValue,
+                specialityIds: specialityIds,
+                source: dataPoint["source"].stringValue,
+                phoneNumber: dataPoint["phoneNumber"].stringValue,
+                email: dataPoint["email"].stringValue,
+                website: dataPoint["website"].stringValue,
+                openingHours: openingHours
+            )
             
             data.append(doctor)
         }
         dataSource.data = data
     }
-    
-    
 }

@@ -14,12 +14,13 @@ class DoctorListViewDataSource: NSObject, UITableViewDataSource {
             onDataUpdated()
         }
     }
+
     var onDataUpdated: () -> Void = {}
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DoctorCell") as! DoctorCell
         cell.name = data[indexPath.row].name

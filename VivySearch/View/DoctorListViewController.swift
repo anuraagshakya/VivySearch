@@ -14,17 +14,17 @@ class DoctorListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set title
         navigationItem.title = "Doctors near you"
-        
+
         //
         dataSource.onDataUpdated = { [unowned self] in
             self.tableView.reloadData()
         }
         tableView.dataSource = dataSource
         viewModel = DoctorListViewModel(dataSource: dataSource)
-        
+
         //
         viewModel.fetchDoctors()
     }
@@ -34,4 +34,3 @@ class DoctorListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-
