@@ -10,28 +10,30 @@ import Foundation
 import SwiftyJSON
 
 class DoctorListViewModel {
-    var dataSource: DoctorListViewDataSource
     let locationProvider = LocationProvider()
     
-    init(dataSource: DoctorListViewDataSource) {
-        self.dataSource = dataSource
-    }
-    
-    func fetchDoctors() {
-        if let sampleFilePath = Bundle.main.path(forResource: "sample", ofType: "json") {
-            if let data = try? String(contentsOfFile: sampleFilePath) {
-                let json = JSON(parseJSON: data)
-                parse(json: json)
-                return
-            } else {
-                print("Could not read contents of file")
-            }
-        } else {
-            print("File not found")
+    func fetchDoctors(completion: @escaping ([Doctor]?, ErrorResult?) -> ()) {
+        DoctorAPI.sharedInstance.authenticate { (errorResult) in
+            // on failure propagate error result to viewcontroller
+            completion(nil, errorResult)
         }
+        
+        // Fetch sample data from file for UI testing
+        guard let sampleFilePath = Bundle.main.path(forResource: "sample1", ofType: "json") else {
+            completion(nil, ErrorResult.other(string: "File could not be opened"))
+            return
+        }
+        
+        guard let data = try? String(contentsOfFile: sampleFilePath) else {
+            completion(nil, ErrorResult.other(string: "File contents could not be read"))
+            return
+        }
+        
+        let json = JSON(parseJSON: data)
+        completion(parse(json: json), nil)
     }
     
-    func parse(json: JSON) {
+    func parse(json: JSON) -> [Doctor] {
         var data = [Doctor]()
         
         for dataPoint in json["doctors"].arrayValue {
@@ -64,6 +66,6 @@ class DoctorListViewModel {
             
             data.append(doctor)
         }
-        dataSource.data = data
+        return data
     }
 }

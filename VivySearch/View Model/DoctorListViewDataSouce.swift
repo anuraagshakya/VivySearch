@@ -11,11 +11,14 @@ import UIKit
 class DoctorListViewDataSource: NSObject, UITableViewDataSource {
     var data = [Doctor]() {
         didSet {
+            // call onDataUpdated closure when data is set
             onDataUpdated()
         }
     }
 
     var onDataUpdated: () -> Void = {}
+
+    // MARK: UITableViewDelegate methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count

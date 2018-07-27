@@ -10,7 +10,7 @@ import UIKit
 
 class DoctorListViewController: UITableViewController {
     var dataSource = DoctorListViewDataSource()
-    var viewModel: DoctorListViewModel!
+    var viewModel = DoctorListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +18,29 @@ class DoctorListViewController: UITableViewController {
         // Set title
         navigationItem.title = "Doctors near you"
 
-        //
+        // Relead the tableview when the data sources' data is updated
         dataSource.onDataUpdated = { [unowned self] in
             self.tableView.reloadData()
         }
-        tableView.dataSource = dataSource
-        viewModel = DoctorListViewModel(dataSource: dataSource)
+        tableView.dataSource = self.dataSource
 
-        //
-        viewModel.fetchDoctors()
+        // Call fetchDoctors, which for the moment authenticates the user and
+        //  loads data from sample.json file for UI testing
+        // TODO: Remove when search functionality is implemented
+        viewModel.fetchDoctors { (doctors, error) in
+            if let err = error {
+                self.showError(err)
+                return
+            }
+            self.dataSource.data = doctors!
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func showError(_ error: ErrorResult) {
+        print(error.description())
+        let ac = UIAlertController(title: "An Error Occurred", message: error.description(), preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(ac, animated: true)
     }
+    
 }
