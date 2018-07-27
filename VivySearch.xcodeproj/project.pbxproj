@@ -14,6 +14,7 @@
 		CE37AC652109B669008DE500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE37AC642109B669008DE500 /* Assets.xcassets */; };
 		CE37AC682109B669008DE500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE37AC662109B669008DE500 /* LaunchScreen.storyboard */; };
 		CE8AA003210B3C3F0053D914 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8AA002210B3C3F0053D914 /* ErrorResult.swift */; };
+		CE8AA005210B91D30053D914 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8AA004210B91D30053D914 /* SearchBar.swift */; };
 		CEB78BC1210A1EEF005B0200 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = CEB78BC0210A1EEF005B0200 /* sample.json */; };
 		CEB78BC5210A261C005B0200 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BC4210A261C005B0200 /* Doctor.swift */; };
 		CEB78BC9210A348F005B0200 /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BC8210A348F005B0200 /* DoctorCell.swift */; };
@@ -34,6 +35,7 @@
 		CE37AC672109B669008DE500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE37AC692109B669008DE500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8AA002210B3C3F0053D914 /* ErrorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		CE8AA004210B91D30053D914 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CEB78BC0210A1EEF005B0200 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		CEB78BC4210A261C005B0200 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		CEB78BC8210A348F005B0200 /* DoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCell.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CE37AC5F2109B666008DE500 /* DoctorListViewController.swift */,
+				CE8AA004210B91D30053D914 /* SearchBar.swift */,
 				CEB78BC8210A348F005B0200 /* DoctorCell.swift */,
 			);
 			path = View;
@@ -272,6 +275,7 @@
 				CE37AC5E2109B666008DE500 /* AppDelegate.swift in Sources */,
 				CEB78BD3210A693A005B0200 /* LocationProvider.swift in Sources */,
 				CE8AA003210B3C3F0053D914 /* ErrorResult.swift in Sources */,
+				CE8AA005210B91D30053D914 /* SearchBar.swift in Sources */,
 				CEB78BC5210A261C005B0200 /* Doctor.swift in Sources */,
 				CEB78BCE210A34C8005B0200 /* DocotorListViewModel.swift in Sources */,
 			);

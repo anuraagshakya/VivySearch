@@ -12,6 +12,8 @@ class DoctorListViewController: UITableViewController {
     var dataSource = DoctorListViewDataSource()
     var viewModel = DoctorListViewModel()
 
+    @IBOutlet var searchBar: SearchBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,12 +24,15 @@ class DoctorListViewController: UITableViewController {
         dataSource.onDataUpdated = { [unowned self] in
             self.tableView.reloadData()
         }
-        tableView.dataSource = self.dataSource
+        tableView.dataSource = dataSource
+        
+        // Set search bar's seach action delegate to self
+        searchBar.searchActionDelegate = self
 
         // Call fetchDoctors, which for the moment authenticates the user and
         //  loads data from sample.json file for UI testing
         // TODO: Remove when search functionality is implemented
-        viewModel.fetchDoctors { (doctors, error) in
+        viewModel.fetchDoctors { doctors, error in
             if let err = error {
                 self.showError(err)
                 return
@@ -42,5 +47,10 @@ class DoctorListViewController: UITableViewController {
         ac.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(ac, animated: true)
     }
-    
+}
+
+extension DoctorListViewController: SearchActionDelegate {
+    func searchBarDidRequestSearchFor(string: String) {
+        print("Search for \(string)")
+    }
 }

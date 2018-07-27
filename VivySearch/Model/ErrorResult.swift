@@ -15,11 +15,11 @@ enum ErrorResult: Error {
     
     func description() -> String {
         switch self {
-        case let .network(string):
+        case .network(let string):
             return "Network Error: \(string)"
-        case let .parser(string):
+        case .parser(let string):
             return "Parser Error: \(string)"
-        case let .other(string):
+        case .other(let string):
             return "Error: \(string)"
         }
     }

@@ -19,7 +19,7 @@ class DoctorListViewModel {
         }
         
         // Fetch sample data from file for UI testing
-        guard let sampleFilePath = Bundle.main.path(forResource: "sample1", ofType: "json") else {
+        guard let sampleFilePath = Bundle.main.path(forResource: "sample", ofType: "json") else {
             completion(nil, ErrorResult.other(string: "File could not be opened"))
             return
         }
