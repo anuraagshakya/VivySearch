@@ -9,5 +9,9 @@
 import Foundation
 
 class DoctorAPI {
+    let username = "ioschallenge@uvita.eu"
+    let password = "shouldnotbetoohard"
     
+    func authenticate() {
+    }
 }

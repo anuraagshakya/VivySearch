@@ -19,6 +19,7 @@
 		CEB78BCD210A34C8005B0200 /* DoctorListViewDataSouce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BCB210A34C8005B0200 /* DoctorListViewDataSouce.swift */; };
 		CEB78BCE210A34C8005B0200 /* DocotorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */; };
 		CEB78BD1210A5C7B005B0200 /* DoctorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */; };
+		CEB78BD3210A693A005B0200 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BD2210A693A005B0200 /* LocationProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		CEB78BCB210A34C8005B0200 /* DoctorListViewDataSouce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorListViewDataSouce.swift; sourceTree = "<group>"; };
 		CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocotorListViewModel.swift; sourceTree = "<group>"; };
 		CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAPI.swift; sourceTree = "<group>"; };
+		CEB78BD2210A693A005B0200 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		FDDEE8DEFC3CAE5452E3A3EF /* Pods_VivySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB78BCF210A5C56005B0200 /* Networking */,
+				CEB78BD4210A6D9C005B0200 /* Location */,
 				CEB78BBF210A1D6B005B0200 /* Model */,
 				CEB78BBD210A1D61005B0200 /* View */,
 				CEB78BCA210A34C8005B0200 /* View Model */,
@@ -136,6 +139,14 @@
 				CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CEB78BD4210A6D9C005B0200 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CEB78BD2210A693A005B0200 /* LocationProvider.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				CE37AC602109B666008DE500 /* DoctorListViewController.swift in Sources */,
 				CEB78BD1210A5C7B005B0200 /* DoctorAPI.swift in Sources */,
 				CE37AC5E2109B666008DE500 /* AppDelegate.swift in Sources */,
+				CEB78BD3210A693A005B0200 /* LocationProvider.swift in Sources */,
 				CEB78BC5210A261C005B0200 /* Doctor.swift in Sources */,
 				CEB78BCE210A34C8005B0200 /* DocotorListViewModel.swift in Sources */,
 			);

@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class DoctorListViewModel {
     var dataSource: DoctorListViewDataSource
+    let locationProvider = LocationProvider()
     
     init(dataSource: DoctorListViewDataSource) {
         self.dataSource = dataSource
@@ -64,4 +65,6 @@ class DoctorListViewModel {
         }
         dataSource.data = data
     }
+    
+    
 }
