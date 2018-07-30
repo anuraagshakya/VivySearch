@@ -9,8 +9,8 @@
 import UIKit
 
 class DoctorListViewController: UITableViewController {
-    var dataSource = DoctorListViewDataSource()
-    var viewModel = DoctorListViewModel()
+    private var dataSource  = DoctorListViewDataSource()
+    private var viewModel   = DoctorListViewModel()
 
     @IBOutlet var searchBar: SearchBar!
 
@@ -32,7 +32,7 @@ class DoctorListViewController: UITableViewController {
         // Call fetchDoctors, which for the moment authenticates the user and
         //  loads data from sample.json file for UI testing
         // TODO: Remove when search functionality is implemented
-        viewModel.fetchDoctors { doctors, error in
+        viewModel.fetchDoctors { (doctors, error) -> () in
             if let err = error {
                 self.showError(err)
                 return

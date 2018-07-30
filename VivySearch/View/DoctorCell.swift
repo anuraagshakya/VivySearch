@@ -21,6 +21,8 @@ class DoctorCell: UITableViewCell {
         }
     }
 
+    // MARK: IBOutlets
+
     @IBOutlet private var photo: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
     @IBOutlet private var addressLabel: UILabel!

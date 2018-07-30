@@ -10,6 +10,8 @@ import Foundation
 import SwiftyJSON
 
 class DoctorAPI {
+    static let sharedInstance = DoctorAPI()
+    
     // MARK: User credential constants
     
     let username = "ioschallenge@uvita.eu"
@@ -17,13 +19,11 @@ class DoctorAPI {
     
     // MARK: Endpoint constants
     
-    let authenticationEndpoint = "https://api.uvita.eu/oauth/token"
-    let searchEndpoint = "https://api.uvita.eu/api/users/me/doctors"
-    let pictureEndpoint = "https://api.uvita.eu/api/users/me/files"
+    let authenticationEndpoint  = "https://api.uvita.eu/oauth/token"
+    let searchEndpoint          = "https://api.uvita.eu/api/users/me/doctors"
+    let pictureEndpoint         = "https://api.uvita.eu/api/users/me/files"
     
-    //
-    
-    static let sharedInstance = DoctorAPI()
+    // MARK: API methods
     
     func authenticate(onFailure: @escaping (ErrorResult) -> ()) {
         let url = URL(string: authenticationEndpoint)!
