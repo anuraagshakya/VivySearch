@@ -32,7 +32,7 @@ class DoctorListViewController: UITableViewController {
         // Call fetchDoctors, which for the moment authenticates the user and
         //  loads data from sample.json file for UI testing
         // TODO: Remove when search functionality is implemented
-        viewModel.fetchDoctors { (doctors, error) -> () in
+        viewModel.fetchDoctors { [unowned self] (doctors, error) -> () in
             if let err = error {
                 self.showError(err)
                 return
@@ -43,7 +43,9 @@ class DoctorListViewController: UITableViewController {
 
     func showError(_ error: ErrorResult) {
         print(error.description())
-        let ac = UIAlertController(title: "An Error Occurred", message: error.description(), preferredStyle: .alert)
+        let ac = UIAlertController(title: "An Error Occurred",
+                                   message: error.description(),
+                                   preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(ac, animated: true)
     }

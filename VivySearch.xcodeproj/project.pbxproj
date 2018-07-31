@@ -22,6 +22,7 @@
 		CEB78BCE210A34C8005B0200 /* DocotorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */; };
 		CEB78BD1210A5C7B005B0200 /* DoctorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */; };
 		CEB78BD3210A693A005B0200 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB78BD2210A693A005B0200 /* LocationProvider.swift */; };
+		CEC4A407210F1C8600A8E039 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4A406210F1C8600A8E039 /* RequestFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		CEB78BCC210A34C8005B0200 /* DocotorListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocotorListViewModel.swift; sourceTree = "<group>"; };
 		CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAPI.swift; sourceTree = "<group>"; };
 		CEB78BD2210A693A005B0200 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		CEC4A406210F1C8600A8E039 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		FDDEE8DEFC3CAE5452E3A3EF /* Pods_VivySearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivySearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB78BD0210A5C7B005B0200 /* DoctorAPI.swift */,
+				CEC4A406210F1C8600A8E039 /* RequestFactory.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC4A407210F1C8600A8E039 /* RequestFactory.swift in Sources */,
 				CEB78BC9210A348F005B0200 /* DoctorCell.swift in Sources */,
 				CEB78BCD210A34C8005B0200 /* DoctorListViewDataSouce.swift in Sources */,
 				CE37AC602109B666008DE500 /* DoctorListViewController.swift in Sources */,

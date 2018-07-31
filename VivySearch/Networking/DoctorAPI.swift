@@ -26,14 +26,36 @@ class DoctorAPI {
     // MARK: API methods
     
     func authenticate(onFailure: @escaping (ErrorResult) -> ()) {
-        let url = URL(string: authenticationEndpoint)!
-        var request = URLRequest(url: url)
+        let url = URL(string: authenticationEndpoint)
+        guard url != nil else {
+            onFailure(ErrorResult.network(string: "Could not access URL"))
+            return
+        }
+        var request = RequestFactory.request(method: .POST, url: url!)
+
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("Basic aXBob25lOmlwaG9uZXdpbGxub3RiZXRoZXJlYW55bW9yZQ==", forHTTPHeaderField: "Authorization")
-        request.httpMethod = "POST"
-        let postString = "grant_type=password&username=ioschallenge%40uvita.eu&password=shouldnotbetoohard"
+        
+        let postString = "grant_type=password&username=\(username)&password=\(password)"
         request.httpBody = postString.data(using: .utf8)
         
+        performNetworkTask(request: request, onFailure: onFailure)
+    }
+    
+    func queryDoctorsUsing(text: String, onFailure: @escaping (ErrorResult) -> ()) {
+        var request = RequestFactory.request(method: .GET, url: URL(string: searchEndpoint)!)
+        let authToken = ""
+        
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("Basic \(authToken)", forHTTPHeaderField: "Authorization")
+        
+        let postString = "/text=\(text)"
+        request.httpBody = postString.data(using: .utf8)
+        
+        performNetworkTask(request: request, onFailure: onFailure)
+    }
+    
+    func performNetworkTask(request: URLRequest, onFailure: @escaping (ErrorResult) -> ()) {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             // Check for networking errors
             guard let _ = data, error == nil else {
